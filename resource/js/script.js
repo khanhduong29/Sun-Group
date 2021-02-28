@@ -52,6 +52,7 @@ $(document).ready(function(){
     });
 
     $("#basic-form").validate({
+        focusInvalid: false,
         rules: {
             'name': {
             required: true,
@@ -95,6 +96,7 @@ $(document).ready(function(){
     });
 
     $("#join-form").validate({
+        focusInvalid: false,
         rules: {
             'name': {
             required: true,
