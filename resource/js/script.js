@@ -145,7 +145,6 @@ $(document).ready(function(){
                 title: 'Gửi thành công',
                 text: 'Thông tin của bạn đã được gửi đi !',
                 timer: 1500,
-                size:50,
                 button: false
             });
         } else {
@@ -155,7 +154,6 @@ $(document).ready(function(){
                 title: 'Thất bại',
                 text: 'Vui lòng nhập đúng định dạng',
                 timer: 1500,
-                size:80,
                 button: false
             });
         }
@@ -169,7 +167,6 @@ $(document).ready(function(){
                 title: 'Gửi thành công',
                 text: 'Thông tin của bạn đã được gửi đi !',
                 timer: 1500,
-                size:50,
                 button: false
             });
         } else {
@@ -179,7 +176,6 @@ $(document).ready(function(){
                 title: 'Thất bại',
                 text: 'Vui lòng nhập đúng định dạng',
                 timer: 1500,
-                size:80,
                 button: false
             });
         }
