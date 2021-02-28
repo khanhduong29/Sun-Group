@@ -687,6 +687,9 @@ main .navigation .container a .fa-arrow-left {
   color: #212529;
   margin-right: 5px;
 }
+main #job-detail .row {
+  margin: 0;
+}
 main #job-detail .container {
   position: relative;
   padding: 60px 0px;

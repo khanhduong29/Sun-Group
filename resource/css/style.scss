@@ -720,6 +720,9 @@ main {
     }
 
     #job-detail {
+        & .row {
+            margin: 0;
+        }
         & .container {
             position: relative;
             padding: 60px 0px;
