@@ -53,77 +53,140 @@ $(document).ready(function(){
 
     $("#basic-form").validate({
         rules: {
-            name : {
+            'name': {
             required: true,
-            minlength: 8
-            },
-            email: {
-                required: true,
-                email: true,
-                valid_email: true
-            },
-            phone: {
-                required: true,
-                minlength: 8
-            },
-            file: {
-                required:true,
-                extension: "docx|doc|pdf"
-            }
+            minlength: 6,
+            maxlength: 50
+          },
+          'email': {
+            required: true,
+            minlength: 6,
+            maxlength: 255,
+            email: true
+          },
+          'phone': {
+              required: true,
+              digits: true
+          },
+          'file': {
+              required: true
+          }
+        },
+        messages: {
+            'name': {
+            required: "Tên không thể trống",
+            minlength: "Tên phải từ 6 - 50 ký tự",
+            maxlength: "Tên phải từ 6 - 50 ký tự",
+          },
+          'email': {
+            required: "Email không thể trống",
+            email: "Email không đúng định dạng",
+            minlength: "Email phải từ 6 - 255 ký tự",
+            maxlength: "Email phải từ 6 - 255 ký tự"
+          },
+          'phone': {
+              required: "Số điện thoại không thể trống",
+              digits: "Số điện thoại sai định dạng"
+          },
+          'file': {
+            required: "Chưa chọn file"
+          }
         }
     });
 
     $("#join-form").validate({
         rules: {
-            name : {
+            'name': {
             required: true,
-            minlength: 8
-            },
-            email: {
-                required: true,
-                email: true,
-                valid_email: true
-            },
-            phone: {
-                required: false,
-                minlength: 8
-            },
-            address: {
-                required:false
-            },
-            company: {
-                required: false
-            },
-            year: {
-                required: false
-            },
-            content: {
-                required: false
-            },
-            file: {
-                required:true,
-                extension: "docx|doc|pdf"
-            }
+            minlength: 6,
+            maxlength: 50
+          },
+          'email': {
+            required: true,
+            minlength: 6,
+            maxlength: 255,
+            email: true
+          },
+          'phone': {
+              required: true,
+              digits: true
+          },
+          'file': {
+              required: true
+          }
+        },
+        messages: {
+            'name': {
+            required: "Tên không thể trống",
+            minlength: "Tên phải từ 6 - 50 ký tự",
+            maxlength: "Tên phải từ 6 - 50 ký tự",
+          },
+          'email': {
+            required: "Email không thể trống",
+            email: "Email không đúng định dạng",
+            minlength: "Email phải từ 6 - 255 ký tự",
+            maxlength: "Email phải từ 6 - 255 ký tự"
+          },
+          'phone': {
+              required: "Số điện thoại không thể trống",
+              digits: "Số điện thoại sai định dạng"
+          },
+          'file': {
+            required: "Chưa chọn file"
+          }
         }
     });
 
     $("#basic-form").submit(function(){
         if($(this).valid()) {
-            swal("Gửi thành công", "Thông tin của bạn đã được gửi đi !", "success");
+            swal({
+                position: 'middle',
+                icon: 'success',
+                title: 'Gửi thành công',
+                text: 'Thông tin của bạn đã được gửi đi !',
+                timer: 1500,
+                size:50,
+                button: false
+            });
         } else {
-            swal("Thất bại", "Vui lòng nhập đúng định dạng yêu cầu", "error");
+            swal({
+                position: 'middle',
+                icon: 'error',
+                title: 'Thất bại',
+                text: 'Vui lòng nhập đúng định dạng',
+                timer: 1500,
+                size:80,
+                button: false
+            });
         }
     });
 
     $("#join-form").submit(function(){
         if($(this).valid()) {
-            swal("Gửi thành công", "Thông tin của bạn đã được gửi đi !", "success");
+            swal({
+                position: 'middle',
+                icon: 'success',
+                title: 'Gửi thành công',
+                text: 'Thông tin của bạn đã được gửi đi !',
+                timer: 1500,
+                size:50,
+                button: false
+            });
         } else {
-            swal("Thất bại", "Vui lòng nhập đúng định dạng yêu cầu", "error");
+            swal({
+                position: 'middle',
+                icon: 'error',
+                title: 'Thất bại',
+                text: 'Vui lòng nhập đúng định dạng',
+                timer: 1500,
+                size:80,
+                button: false
+            });
         }
     });
 
+    $('#file').change(function() {
+        $('.upload strong').text( " :" + this.value);
+    });
 
-
-    
 });
