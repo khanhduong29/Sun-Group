@@ -140,7 +140,6 @@ $(document).ready(function(){
     $("#basic-form").submit(function(){
         if($(this).valid()) {
             swal({
-                position: 'middle',
                 icon: 'success',
                 title: 'Gửi thành công',
                 text: 'Thông tin của bạn đã được gửi đi !',
@@ -149,7 +148,6 @@ $(document).ready(function(){
             });
         } else {
             swal({
-                position: 'middle',
                 icon: 'error',
                 title: 'Thất bại',
                 text: 'Vui lòng nhập đúng định dạng',
@@ -162,7 +160,6 @@ $(document).ready(function(){
     $("#join-form").submit(function(){
         if($(this).valid()) {
             swal({
-                position: 'middle',
                 icon: 'success',
                 title: 'Gửi thành công',
                 text: 'Thông tin của bạn đã được gửi đi !',
@@ -171,7 +168,6 @@ $(document).ready(function(){
             });
         } else {
             swal({
-                position: 'middle',
                 icon: 'error',
                 title: 'Thất bại',
                 text: 'Vui lòng nhập đúng định dạng',
